@@ -77,7 +77,7 @@ ax.bar(barplotdata.index.astype(str), barplotdata[variable], color="#fc8d62")
 ax.set_ylabel(variable)
 
 row2_col1.subheader("Compare Customer Groups")
-row2_col1.pyplot(fig1, use_container_width=True)
+row2_col1.pyplot(fig1)
 
 # create seaborn figure
 fig2 = sns.lmplot(y="borrower_rate", x=variable, data=filtered_data, height=4, aspect=1/1,
@@ -85,7 +85,7 @@ fig2 = sns.lmplot(y="borrower_rate", x=variable, data=filtered_data, height=4, a
 
 
 row2_col2.subheader("Borrower Rate Correlations")
-row2_col2.pyplot(fig2, use_container_width=True)
+row2_col2.pyplot(fig2)
 
 
 st.header("Predicting Customer Default")
